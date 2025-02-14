@@ -31,7 +31,7 @@ Verifique se ele esta instalado pelo comando
 ```
 Abra o visual studio, no terminal vá na pasta que deseja e rode o Ddockerfile do projeto
 ```bash
-  docker compose up -d
+  docker compose up --build
 ```
 Depois de rodar o docker, instale as dependencias
 ```bash
