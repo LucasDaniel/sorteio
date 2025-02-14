@@ -4,6 +4,13 @@
 Teste de Arquitetura em PHP
 Criar de API com PHP puro
 
+## Tecnologias
+
+Composer 2.4.2v
+Docker 25.0.3v
+PHP 8.3v
+postgres 17.2v
+
 ## Instalação
 
 Faça download do projeto pelo github
