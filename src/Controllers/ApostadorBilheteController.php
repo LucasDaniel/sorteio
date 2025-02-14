@@ -12,9 +12,9 @@ class ApostadorBilheteController extends Controller {
 
         $body = $request::body();
 
-        $tripulanteBilheteCreate = ApostadorBilheteService::createRandomNumbers($body);
+        $apostadorBilheteCreate = ApostadorBilheteService::createRandomNumbers($body);
 
-        return self::verifyDataAndReturn($tripulanteBilheteCreate);
+        return self::verifyDataAndReturn($apostadorBilheteCreate);
 
     }
 

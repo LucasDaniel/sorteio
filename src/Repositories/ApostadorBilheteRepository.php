@@ -6,18 +6,18 @@ class ApostadorBilheteRepository {
 
     public static function rawInsertApostadorBilhete() {
         return "INSERT INTO 
-                    tripulante_bilhete (id_tripulante,id_sorteio,numeros_escolhidos)
+                    apostador_bilhete (id_apostador,id_sorteio,numeros_escolhidos)
                 VALUES 
-                    (:id_tripulante,:id_sorteio,:numeros_escolhidos);";
+                    (:id_apostador,:id_sorteio,:numeros_escolhidos);";
     }
 
     public static function rawSelectSameNumbersToSorteio() {
         return "SELECT 
                     count(*)
                 FROM 
-                    tripulante_bilhete
+                    apostador_bilhete
                 WHERE 
-                    id_tripulante = :id_tripulante AND
+                    id_apostador = :id_apostador AND
                     id_sorteio = :id_sorteio AND
                     numeros_escolhidos LIKE :numeros_escolhidos";
     }
@@ -26,9 +26,9 @@ class ApostadorBilheteRepository {
         return "SELECT 
                     count(*)
                 FROM 
-                    tripulante_bilhete
+                    apostador_bilhete
                 WHERE 
-                    id_tripulante = :id_tripulante AND
+                    id_apostador = :id_apostador AND
                     id_sorteio = :id_sorteio";
     }
 
@@ -312,8 +312,8 @@ class ApostadorBilheteRepository {
                         ELSE 0 END END END END END END
                     ELSE 0 END END END END END AS ACERTOS
                 FROM 
-                    tripulante_bilhete tb
-                    INNER JOIN tripulante t ON t.id = tb.id_tripulante
+                    apostador_bilhete tb
+                    INNER JOIN apostador t ON t.id = tb.id_apostador
                     INNER JOIN sorteio s ON s.id = tb.id_sorteio
                 WHERE 
                     tb.id_sorteio = :id_sorteio

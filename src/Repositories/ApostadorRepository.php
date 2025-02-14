@@ -6,7 +6,7 @@ class ApostadorRepository {
 
     public static function rawInsertApostador() {
         return "INSERT INTO 
-                    tripulante (nome)
+                    apostador (nome)
                 VALUES 
                     (:nome)";
     }
@@ -15,9 +15,9 @@ class ApostadorRepository {
         return "SELECT 
                     count(*)
                 FROM 
-                    tripulante
+                    apostador
                 WHERE 
-                    id = :id_tripulante ";
+                    id = :id_apostador ";
     }
 
 }

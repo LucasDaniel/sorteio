@@ -15,7 +15,7 @@ class HtmlService extends BaseService {
             HtmlValidator::validator($data);
             $return = [
                 'sorteio' => Sorteio::selectSorteio($data),
-                'tripulante_bilhetes' => ApostadorBilhete::selectApostadoresBilhetesSorteio($data)
+                'apostador_bilhetes' => ApostadorBilhete::selectApostadoresBilhetesSorteio($data)
             ];
         } catch (\Exception $e) {
             return self::error($e->getMessage());
@@ -46,10 +46,10 @@ class HtmlService extends BaseService {
                 </tr>
         ";
 
-        for ($i = 0; $i < count($json['tripulante_bilhetes']); $i++) {
-            $nome = $json['tripulante_bilhetes'][$i]['nome'];
-            $numeros_escolhidos = $json['tripulante_bilhetes'][$i]['numeros_escolhidos'];
-            $acertos = $json['tripulante_bilhetes'][$i]['acertos'];
+        for ($i = 0; $i < count($json['apostador_bilhetes']); $i++) {
+            $nome = $json['apostador_bilhetes'][$i]['nome'];
+            $numeros_escolhidos = $json['apostador_bilhetes'][$i]['numeros_escolhidos'];
+            $acertos = $json['apostador_bilhetes'][$i]['acertos'];
             $html .= "
                     <tr>
                         <td>$nome</td>

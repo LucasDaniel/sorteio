@@ -77,25 +77,25 @@ Verifique no pgAdmin4 as tabelas para as criações.
 ```
 Não é necessario nenhum argumento
 
-#### Cria um novo tripulante
+#### Cria um novo apostador
 
 ```http
-  POST localhost/tripulante/create
+  POST localhost/apostador/create
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
 | `nome`      | `string` | **Obrigatório**. O nome do novo tripualnte |
 
-#### Cria bilhetes randomicos para um tripulante em um sorteio
+#### Cria bilhetes randomicos para um apostador em um sorteio
 
 ```http
-  POST localhost/tripulante-bilhete/create-random-numbers
+  POST localhost/apostador-bilhete/create-random-numbers
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
-| `id_tripulante`      | `integer` | **Obrigatório**. ID do tripulante |
+| `id_apostador`      | `integer` | **Obrigatório**. ID do apostador |
 | `id_sorteio`      | `integer` | **Obrigatório**. Id do sorteio |
 | `quantTryNumbers`      | `integer` | **Obrigatório**. Quantidade de bilhetes a criar |
 | `quantNumbers`      | `integer` | **Obrigatório**. Quantidade de numeros em cada bilhete |

@@ -11,7 +11,7 @@ class ApostadorBilhete extends Database {
     public static function save(array $data) {
         $pdo = self::getConnection();
         $statement = $pdo->prepare(ApostadorBilheteRepository::rawInsertApostadorBilhete());
-        $statement->bindParam(":id_tripulante", $data['id_tripulante'], PDO::PARAM_INT);
+        $statement->bindParam(":id_apostador", $data['id_apostador'], PDO::PARAM_INT);
         $statement->bindParam(":id_sorteio", $data['id_sorteio'], PDO::PARAM_INT);
         $statement->bindParam(":numeros_escolhidos", $data['numeros_escolhidos'], PDO::PARAM_STR);
         $statement->execute();
@@ -21,7 +21,7 @@ class ApostadorBilhete extends Database {
     public static function verifySameNumbersToSorteio(array $data) {
         $pdo = self::getConnection();
         $statement = $pdo->prepare(ApostadorBilheteRepository::rawSelectSameNumbersToSorteio());
-        $statement->bindParam(":id_tripulante", $data['id_tripulante'], PDO::PARAM_INT);
+        $statement->bindParam(":id_apostador", $data['id_apostador'], PDO::PARAM_INT);
         $statement->bindParam(":id_sorteio", $data['id_sorteio'], PDO::PARAM_INT);
         $statement->bindParam(":numeros_escolhidos", $data['numeros_escolhidos'], PDO::PARAM_STR);
         $statement->execute();
@@ -31,7 +31,7 @@ class ApostadorBilhete extends Database {
     public static function validateQuantTryMaxNumbers(array $data) {
         $pdo = self::getConnection();
         $statement = $pdo->prepare(ApostadorBilheteRepository::rawSelectQuantTryMaxNumbers());
-        $statement->bindParam(":id_tripulante", $data['id_tripulante'][0], PDO::PARAM_INT);
+        $statement->bindParam(":id_apostador", $data['id_apostador'][0], PDO::PARAM_INT);
         $statement->bindParam(":id_sorteio", $data['id_sorteio'][0], PDO::PARAM_INT);
         $statement->execute();
         return $statement->fetchColumn();

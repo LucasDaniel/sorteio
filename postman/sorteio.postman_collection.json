@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "tripulante create",
+			"name": "apostador create",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -20,7 +20,7 @@
 						}
 					}
 				},
-				"url": "localhost/tripulante/create"
+				"url": "localhost/apostador/create"
 			},
 			"response": []
 		},
@@ -61,20 +61,20 @@
 			"response": []
 		},
 		{
-			"name": "tripulante_bilhete create random numbers",
+			"name": "apostador_bilhete create random numbers",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id_tripulante\":10,\r\n    \"id_sorteio\":1,\r\n    \"quantTryNumbers\":2,\r\n    \"quantNumbers\":10\r\n}",
+					"raw": "{\r\n    \"id_apostador\":10,\r\n    \"id_sorteio\":1,\r\n    \"quantTryNumbers\":2,\r\n    \"quantNumbers\":10\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "localhost/tripulante-bilhete/create-random-numbers"
+				"url": "localhost/apostador-bilhete/create-random-numbers"
 			},
 			"response": []
 		},

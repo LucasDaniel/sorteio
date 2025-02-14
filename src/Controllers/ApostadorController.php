@@ -12,9 +12,9 @@ class ApostadorController extends Controller {
        
         $body = $request::body();
 
-        $tripulanteCreate = ApostadorService::create($body);
+        $apostadorCreate = ApostadorService::create($body);
 
-        return self::verifyDataAndReturn($tripulanteCreate);
+        return self::verifyDataAndReturn($apostadorCreate);
         
     }
 

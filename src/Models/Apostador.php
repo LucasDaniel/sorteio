@@ -19,7 +19,7 @@ class Apostador extends Database {
     public static function verifyIdApostadorExists(array $data) {
         $pdo = self::getConnection();
         $statement = $pdo->prepare(ApostadorRepository::rawVerifyIdApostadorExists());
-        $statement->bindParam(":id_tripulante", $data['id_tripulante'][0], PDO::PARAM_STR);
+        $statement->bindParam(":id_apostador", $data['id_apostador'][0], PDO::PARAM_STR);
         $statement->execute();
         return $statement->fetchColumn() > 0;
     }

@@ -19,7 +19,7 @@ class ApostadorBilheteValidator extends Validator {
     public static function validateTryRandomNumbers(array $data) {
 
         $fields = [
-            'id_tripulante' => [ $data['id_tripulante'] ?? '', TypesEnum::INTEGER() ],
+            'id_apostador' => [ $data['id_apostador'] ?? '', TypesEnum::INTEGER() ],
             'id_sorteio' => [ $data['id_sorteio'] ?? '', TypesEnum::INTEGER() ],
             'quantTryNumbers' => [ $data['quantTryNumbers'] ?? '', TypesEnum::INTEGER() ],
             'quantNumbers' => [ $data['quantNumbers'] ?? '', TypesEnum::INTEGER() ],

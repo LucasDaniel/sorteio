@@ -7,7 +7,7 @@ class DatabaseRepository {
     public static function createApostador() {
         print_r("executando createApostador<br><br>");
         return "CREATE TABLE IF NOT EXISTS 
-                        tripulante (
+                        apostador (
                             id  SERIAL PRIMARY KEY,
                             nome VARCHAR(255) UNIQUE
                         );";
@@ -16,9 +16,9 @@ class DatabaseRepository {
     public static function createApostadorBilhete() {
         print_r("executando createApostadorBilhete<br><br>");
         return "CREATE TABLE IF NOT EXISTS 
-                        tripulante_bilhete (
+                        apostador_bilhete (
                             id SERIAL PRIMARY KEY,
-                            id_tripulante INTEGER REFERENCES tripulante,
+                            id_apostador INTEGER REFERENCES apostador,
                             id_sorteio INTEGER REFERENCES sorteio,
                             numeros_escolhidos VARCHAR(255)
                         );";
