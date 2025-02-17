@@ -38,7 +38,7 @@ Verifique se ele esta instalado pelo comando
 ```bash
   docker -v
 ```
-Abra o visual studio, no terminal vá na pasta que deseja e rode o Ddockerfile do projeto
+Abra o visual studio, no terminal vá na pasta que deseja e rode o Dockerfile do projeto
 ```bash
   docker compose up --build
 ```
